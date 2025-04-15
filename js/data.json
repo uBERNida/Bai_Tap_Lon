@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "title": "Nồi cơm điện thông minh XYZ",
+        "description": "Nồi cơm điện thông minh XYZ...",
+        "price": "1.990.000đ",
+        "img": "/images/noicom.jpg",
+        "category": "Thiết bị nhà bếp",
+        "rating": 5,
+        "sale": 15
+    },
+    {
+        "id": 2,
+        "title": "Máy lọc không khí ABC",
+        "description": "Máy lọc không khí ABC...",
+        "price": "3.490.000đ",
+        "img": "/images/maylockongkhi.jpg",
+        "category": "Thiết bị phòng khách",
+        "rating": 4
+    },
+    {
+        "id": 3,
+        "title": "Robot hút bụi lau nhà DEF",
+        "description": "Robot hút bụi lau nhà DEF...",
+        "price": "7.990.000đ",
+        "img": "/images/robothutbui_new.jpg",
+        "category": "Đồ gia dụng thông minh",
+        "rating": 5,
+        "sale": 20
+    },
+    {
+        "id": 4,
+        "title": "Máy giặt cửa trước GHI",
+        "description": "Máy giặt cửa trước GHI...",
+        "price": "9.490.000đ",
+        "img": "/images/maygiat_new.jpg",
+        "category": "Thiết bị giặt là",
+        "rating": 4
+    }
+]

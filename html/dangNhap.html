@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE MART - Đăng nhập</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #ed1c24;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 0; 
+        }
+        .login-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .login-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .form-label .required {
+            color: #ed1c24;
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .error-message {
+            color: #ed1c24;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        .forgot-password {
+            text-align: right;
+            margin: 10px 0 20px;
+        }
+        .forgot-password a {
+            color: #666;
+            font-size: 13px;
+            text-decoration: none;
+        }
+        .login-button {
+            background-color: #ed1c24;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .divider {
+            text-align: center;
+            position: relative;
+            margin: 20px 0;
+            color: #999;
+            font-size: 14px;
+        }
+        .divider::before,
+        .divider::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: 1px;
+            background-color: #ddd;
+        }
+        .divider::before {
+            left: 0;
+        }
+        .divider::after {
+            right: 0;
+        }
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .social-btn {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-btn img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .register-link {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .register-link a {
+            color: #ed1c24;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .backtohome {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .backtohome a{
+            text-decoration: none;
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #000000;
+            padding: 10px 40px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="header">
+        <h1>ABBY'S MART</h1>
+        <p>Kênh đi chợ Online của LOTTE Mart</p>
+    </div>
+
+    <div class="login-container">
+        <div class="login-title">Đăng nhập</div>
+        
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email" class="form-label">
+                    <span>Email<span class="required">*</span></span>
+                </label>
+                <input type="email" class="form-input" id="email" placeholder="Nhập email" required>
+                <div id="email-error" class="error-message"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="form-label">
+                    <span>Mật khẩu<span class="required">*</span></span>
+                </label>
+                <input type="password" class="form-input" id="password" placeholder="Nhập mật khẩu" required>
+                <div id="password-error" class="error-message"></div>
+            </div>
+            
+            <div class="forgot-password">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+            
+            <button type="submit" class="login-button" id="login-btn">Đăng nhập</button>
+            
+            <div id="login-message" class="message"></div>
+        </form>
+        
+        <div class="divider">Hoặc đăng nhập với</div>
+        
+        <div class="social-login">
+            <button type="button" class="social-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/3669/3669491.png" alt="Zalo"> 
+                Zalo
+            </button>
+            <button type="button" class="social-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google">
+                Google
+            </button>
+            <button type="button" class="social-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Kakao Talk">
+                Kakao Talk
+            </button>
+            <button type="button" class="social-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple">
+                Apple ID
+            </button>
+        </div>
+        
+        <div class="register-link">
+            Quý khách chưa có tài khoản? <a href="dangKy.html">Đăng ký</a>
+        </div>
+    </div>
+    
+    <script  src="../js/main.js"></script>
+    <div class="backtohome">
+        <a href="../html/home.html">Back to home</a>
+    </div>
+
+</body>
+</html>
